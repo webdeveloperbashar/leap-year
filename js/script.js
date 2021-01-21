@@ -26,6 +26,11 @@ btn.addEventListener("click", () => {
 document.addEventListener('contextmenu', (e)=>{
     e.preventDefault();
 })
-document.onkeydown = function (e) {
-    return false;
-}
+
+document.onkeydown = function(e) {
+  if (e.ctrlKey && e.which) {
+      return false;
+  } else {
+      return true;
+  }
+};
