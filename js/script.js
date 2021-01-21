@@ -1,12 +1,9 @@
 function leapYearCall() {
   const inputValue = document.getElementById("year").value;
   const outputValue = document.getElementById("showResult");
-  const wrongField = document.getElementById('wrongField');
+  const wrongMsg = document.getElementById('wrongMsg');
   if (inputValue === '') {
-      let p = document.createElement('p');
-      p.className = 'wrongMsg';
-      p.innerHTML = 'Please enter a value in the input field !';
-      wrongField.appendChild(p);
+      wrongMsg.innerHTML = 'Please enter a value in the input field !';
   }else if (inputValue % 4 === 0) {
     outputValue.innerHTML = `${inputValue} is a Leap Year`;
   } else if (inputValue % 400 === 0) {
